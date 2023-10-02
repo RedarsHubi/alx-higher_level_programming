@@ -1,0 +1,3 @@
+#!/bin/bash
+OUTPUT_FILE="${PYFILE}c"
+python -m py_compile "$PYFILE" -b
