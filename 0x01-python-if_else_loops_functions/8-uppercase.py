@@ -13,4 +13,4 @@ def uppercase(str):
             resutl += i
 
         index = index + 1
-    print("{}", result)
+    print("{}".format(result))
