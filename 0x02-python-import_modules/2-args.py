@@ -11,8 +11,6 @@ elif zab == 0:
     print("{} arguments.".format(zab))
 else:
     print("{} arguments:".format(zab))
-    
 for i in sys.argv[1:]:
     print("{}: {}".format(index, i))
-        
     index = index + 1
