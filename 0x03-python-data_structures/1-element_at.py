@@ -8,4 +8,4 @@ def element_at(my_list, idx):
     for i in my_list:
         if index == idx:
             print("{}".format(i))
-            index = index + 1
+        index = index + 1
