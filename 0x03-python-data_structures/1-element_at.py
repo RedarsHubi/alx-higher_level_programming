@@ -7,5 +7,5 @@ def element_at(my_list, idx):
         return None
     for i in my_list:
         if index == idx:
-            print("{}".format(i))
+            return
         index = index + 1
