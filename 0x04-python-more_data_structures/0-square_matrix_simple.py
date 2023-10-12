@@ -1,2 +1,3 @@
 def square_matrix_simple(matrix=[]):
-    return list(map(lambda row: list(map(lambda e: e ** 2, row)), matrix))
+    new_m = [[x * x for x in row] for row in matrix]
+    return new_m
