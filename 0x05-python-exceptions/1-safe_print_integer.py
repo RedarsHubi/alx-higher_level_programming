@@ -2,9 +2,6 @@
 def safe_print_integer(value):
     try:
         print("{:d}".format(value))
-    except typo:
-        None
-    if value - 0 == value:
         return True
-    else:
+    except typo:
         return False
