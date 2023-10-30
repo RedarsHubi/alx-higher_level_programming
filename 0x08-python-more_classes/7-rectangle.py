@@ -61,7 +61,7 @@ class Rectangle:
 
     def __str__(self):
         """returns printable version of rectanlge"""
-        if self.__height == 0 or self.width == 0:
+        if not self.width or not self.height:
             return ""
         return ((str(self.print_symbol) * self.__width + "\n") *
                 self._height)[:-1]
