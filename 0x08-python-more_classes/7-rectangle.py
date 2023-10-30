@@ -61,10 +61,14 @@ class Rectangle:
 
     def __str__(self):
         """returns printable version of rectanlge"""
-        if not self.width or not self.height:
-            return ""
-        return ((str(self.print_symbol) * self.width + "\n") *
-                self._height)[:-1]
+	tango = ""
+        if self.width == 0 or self.height == 0:
+            return tango
+
+        for i in range(self.height):
+           tango += (str(self.print_symbol) * self.width) + "\n"
+
+        return tango[:-1]
 
     def __repr__(self):
         """returns a string representation of the rectangle"""
