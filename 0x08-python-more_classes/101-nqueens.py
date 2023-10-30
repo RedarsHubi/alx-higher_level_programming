@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""module to solve N-queen puzzle"""
+"""
+
+This module contains an algorithm that resolves the N-Queen puzzle
+using backtracking
+
+"""
 
 
 def is_Safe(m_queen, nqueen):
@@ -64,7 +69,7 @@ if __name__ == '__main__':
 
     try:
         size = int(sys.argv[1])
-    except:
+    except ValueError:
         print("N must be a number")
         sys.exit(1)
 
