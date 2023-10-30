@@ -61,12 +61,12 @@ class Rectangle:
 
     def __str__(self):
         """returns printable version of rectanlge"""
-	tango = ""
+        tango = ""
         if self.width == 0 or self.height == 0:
             return tango
 
         for i in range(self.height):
-           tango += (str(self.print_symbol) * self.width) + "\n"
+            tango += (str(self.print_symbol) * self.width) + "\n"
 
         return tango[:-1]
 
