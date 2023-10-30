@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"module to solve N-queen puzzle"""
+"""module to solve N-queen puzzle"""
 
 
 def is_Safe(m_queen, nqueen):
@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
     try:
         size = int(sys.argv[1])
-    except TypeError:
+    except:
         print("N must be a number")
         sys.exit(1)
 
