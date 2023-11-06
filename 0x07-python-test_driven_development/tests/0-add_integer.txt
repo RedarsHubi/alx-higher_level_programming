@@ -1,0 +1,112 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+Import function from module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test one int argument:
+
+    >>> add_integer(5)
+    103
+
+Test one int argument and check for given second:
+
+    >>> add_integer(0)
+    98
+
+Test one float:
+
+    >>> add_integer(122.5)
+    220
+
+Test one negative float:
+
+    >>> add_integer(-95.5)
+    3
+
+Test two integers:
+
+    >>> add_integer(10, 5)
+    15
+
+Test two big integers:
+
+    >>> add_integer(999999999, 999999999)
+    1999999998
+
+Test positive, negative integers:
+
+    >>> add_integer(34263478, -89234582395)
+    -89200318917
+
+Test negative, positive integers:
+
+    >>> add_integer(-4535, 8632)
+    4097
+
+Test an integer and a float:
+
+    >>> add_integer(50, 10.145)
+    60
+
+Test a float and an integer:
+
+    >>> add_integer(64.2, 2)
+    66
+
+Test two floats:
+
+    >>> add_integer(5.9, 4.9)
+    9
+
+Add infinity:
+
+    >>> add_integer(float('inf'), float('-inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+Add nan:
+
+    >>> add_integer(67, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+Test first arg invalid:
+
+    >>> add_integer("ana", 0)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test second arg invalid:
+
+    >>> add_integer(1233, [])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Test both args invalid:
+
+    >>> add_integer("smaa", "fham")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test two strings:
+
+    >>> add_integer("foo", "bar")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Test float overflow:
+    >>> add_integer(float('inf'), 10)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
