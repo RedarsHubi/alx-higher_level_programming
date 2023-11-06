@@ -46,3 +46,8 @@ Instance has the correct type
     >>> my_list = MyList()
     >>> type(my_list) == MyList
     True
+
+Printing an empty list
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
