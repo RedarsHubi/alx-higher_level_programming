@@ -40,3 +40,9 @@ Test list with a strings
     >>> my_list.append('Cho')
     >>> my_list.print_sorted()
     ['Amy', 'Bee', 'Cho', 'Di']
+   
+Instance has the correct type
+
+    >>> my_list = MyList()
+    >>> type(my_list) == MyList
+    True
