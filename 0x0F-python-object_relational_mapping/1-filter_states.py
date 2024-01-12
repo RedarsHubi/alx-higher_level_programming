@@ -19,7 +19,11 @@ def filter_st(usrnm, psswrd, db_nm):
 
         cursor = connection.cursor()
 
-        query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
+        query = ("SELECT * \
+        FROM states \
+        WHERE CONVERT(`name` USING Latin1) \
+        COLLATE Latin1_General_CS \
+        LIKE 'N%';")
         cursor.execute(query)
 
         states = cursor.fetchall()
