@@ -19,8 +19,9 @@ def filter_st(usrnm, psswrd, db_nm, search):
 
         cursor = connection.cursor()
 
-        query = "SELECT * FROM states WHERE name = '{}' \
-        ORDER BY id ASC".format(search)
+        query = "SELECT * FROM states \
+        WHERE CONVERT(name USING Latin1) \
+        COLLATE Latin1_General_CS = '{}';".format(search)
         cursor.execute(query)
 
         states = cursor.fetchall()
@@ -39,6 +40,7 @@ def filter_st(usrnm, psswrd, db_nm, search):
 
 if __name__ == "__main__":
     if len(sys.argv) == 5:
-        usrnm, psswrd, db_nm, search = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+        usrnm, psswrd, db_nm, search = sys.argv[1], \
+            sys.argv[2], sys.argv[3], sys.argv[4]
 
         filter_st(usrnm, psswrd, db_nm, search)
