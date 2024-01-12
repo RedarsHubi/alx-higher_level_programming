@@ -19,7 +19,7 @@ def list_st(usrnm, psswrd, db_nm, state):
 
         cursor = connection.cursor()
 
-        query = "SELECT cities.id, cities.name, states.name \
+        query = "SELECT cities.name \
         FROM cities JOIN states ON cities.state_id \
         = states.id WHERE states.name = %s"
 
@@ -27,8 +27,7 @@ def list_st(usrnm, psswrd, db_nm, state):
 
         states = cursor.fetchall()
 
-        for zab in states:
-            print(zab)
+        print(", ".join([stat[0] for stat in states]))
 
     except MySQLdb.Error as e:
         print(f"Error: {e}")
