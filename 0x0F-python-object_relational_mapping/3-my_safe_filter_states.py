@@ -22,7 +22,7 @@ def filter_st(usrnm, psswrd, db_nm, search):
         query = "SELECT * FROM states \
         WHERE CONVERT(name USING Latin1) \
         COLLATE Latin1_General_CS = %s;"
-        cursor.execute(query,(search,))
+        cursor.execute(query, (search,))
 
         states = cursor.fetchall()
 
