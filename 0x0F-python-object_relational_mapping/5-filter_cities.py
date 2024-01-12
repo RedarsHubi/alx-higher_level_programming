@@ -40,6 +40,7 @@ def list_st(usrnm, psswrd, db_nm, state):
 
 if __name__ == "__main__":
     if len(sys.argv) == 5:
-        usrnm, psswrd, db_nm, state = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+        usrnm, psswrd, db_nm, state = \
+            sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
         list_st(usrnm, psswrd, db_nm, state)
