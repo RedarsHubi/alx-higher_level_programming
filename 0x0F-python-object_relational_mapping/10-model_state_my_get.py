@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     idok = session.query(State).filter(State.name == sys.argv[4]).all()
     if idok:
-        print(idok.id)
+        print(idok[0].id)
     else:
         print('Not found')
     session.close()
