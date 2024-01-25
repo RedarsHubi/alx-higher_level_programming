@@ -15,4 +15,4 @@ def find_peak(list_of_integers):
             lft = m + 1
 
         else:
-            return m
+            return lt[m]
