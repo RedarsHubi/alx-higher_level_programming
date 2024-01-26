@@ -19,4 +19,4 @@ if __name__ == "__main__":
         user_data = response.json()
         print(user_data.get('id'))
     else:
-        print("Failed to fetch user data. Status code:", response.status_code)
+        print("None")
