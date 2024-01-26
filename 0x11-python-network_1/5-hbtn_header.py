@@ -11,3 +11,5 @@ if __name__ == "__main__":
     try:
         rq = requests.get(sys.argv[1])
         print(rq.headers['X-Request-Id'])
+    except Exception as e:
+        pass
